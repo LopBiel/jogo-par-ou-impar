@@ -8,7 +8,7 @@ from time import sleep
 # Inicializa o colorama
 init(autoreset=True)
 
-# 🎨 Função de configuração de cores
+# Função de configuração de cores
 def cores():
     return {
         "titulo": Fore.YELLOW + Style.BRIGHT,
@@ -21,15 +21,15 @@ def cores():
         "valor": Fore.YELLOW,
     }
 
-# 🧱 Função para criar linhas (agora usa valores padrão)
+# Função para criar linhas (agora usa valores padrão)
 def linha():
     print(Fore.CYAN + Style.BRIGHT + '-' * 40)
 
-# 🧹 Função para limpar tela
+#  Função para limpar tela
 def limpar_tela():
     os.system('cls' if os.name == 'nt' else 'clear')
 
-# 🎮 Função principal do jogo
+#  Função principal do jogo
 def jogar():
     c = cores()
     vitorias = 0
@@ -110,5 +110,5 @@ def jogar():
             sleep(1)
             limpar_tela()
 
-# 🚀 Inicia o jogo
+# Inicia o jogo
 jogar()
