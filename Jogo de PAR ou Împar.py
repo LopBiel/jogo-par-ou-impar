@@ -42,8 +42,19 @@ def jogar():
         print(c["texto"] + f"Vitórias consecutivas: {c['sucesso']}{vitorias}\n")
 
         # Entrada do jogador (sem tratamento de erro)
-        jogador = int(input(c["sucesso"] + "Digite um valor de 0 a 10: "))
+        jogador = str(input(c["sucesso"] + "Digite um valor de 0 a 10: "))
+        if jogador.isdigit():
+            jogador = int(jogador)
+            if jogador < 0 or jogador > 10:
+                print(c["erro"] + "Número inválido! Digire números entre 0 e 10.")
+                sleep(1.5)
+                continue
 
+        else:
+            print(c["erro"] + " Número inválido! Tente novamente.")
+            sleep(1.5)
+            continue
+        
         # Escolha do tipo
         tipo = " "
         while tipo not in "PI":
